@@ -10,4 +10,4 @@ python-dotenv
 python-pptx
 openpyxl
 pandas
-pillowstreamlit
+pillow
