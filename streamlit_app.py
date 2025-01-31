@@ -242,7 +242,7 @@ def gerar_resposta(texto_usuario):
             # Implementar controle de taxa
             time.sleep(1)  # Adiciona um atraso de 1 segundo entre as solicitações
             resposta = openai.ChatCompletion.create(
-                model="gpt-4o",  # Usando o GPT-4
+                model="gpt-4o",  # Usando o GPT-4o
                 messages=mensagens,
                 temperature=0.3,
                 max_tokens=800  # Limita a resposta a 800 tokens
