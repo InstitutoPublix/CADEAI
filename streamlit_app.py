@@ -9,7 +9,7 @@ import json
 # Configurações iniciais
 st.set_page_config(
     page_title="CADE IA",
-    page_icon="🧠",
+    page_icon="💛",
     layout="wide",
 )
 
