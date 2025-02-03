@@ -179,9 +179,9 @@ def carregar_contexto():
     # Adicione aqui os arquivos de texto que você deseja usar como contexto
     arquivos_contexto = [
         "contexto1.txt",
-        "contexto2.txt"
-        "contexto3.txt"
-        "contexto4.txt"
+        "contexto2.txt",
+        "contexto3.txt",
+        "contexto4.txt",
         "contexto5.txt"
     ]
 
