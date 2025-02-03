@@ -180,6 +180,9 @@ def carregar_contexto():
     arquivos_contexto = [
         "contexto1.txt",
         "contexto2.txt"
+        "contexto3.txt"
+        "contexto4.txt"
+        "contexto5.txt"
     ]
 
     for arquivo in arquivos_contexto:
