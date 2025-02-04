@@ -16,24 +16,6 @@ st.set_page_config(
     layout="wide",
 )
 
-import streamlit.components.v1 as components
-
-components.html()
-    """
-    <style>
-        .block-overlay {
-            position: fixed;
-            bottom: 0;
-            right: 0;
-            width: 150px;
-            height: 60px;
-            background-color: white;
-            z-index: 9999;
-        }
-    </style>
-    <div class="block-overlay"></div>
-    """,
-    height=0
 
 import time
 
