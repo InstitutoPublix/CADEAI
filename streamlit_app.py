@@ -15,50 +15,8 @@ st.set_page_config(
 
 # CSS personalizado para estilizar o balão de upload e o aviso
 st.markdown(
-
-    
     """
     <style>
-    
-
-    <style>
-/* Remover a barra superior do Streamlit */
-header {display: none !important;}
-
-/* Remover o botão de configurações */
-[data-testid="stToolbar"] {display: none !important;}
-
-/* Remover o rodapé do Streamlit */
-footer {display: none !important;}
-
-/* Remover o botão de compartilhamento */
-[data-testid="stActionButtonIcon"] {display: none !important;}
-
-/* Ajustar margem para evitar espaços vazios */
-.block-container {padding-top: 1rem;}
-
-/* Remover qualquer iframe que contenha o branding */
-iframe {display: none !important;}
-
-/* Ocultar o footer de maneira mais agressiva */
-footer:has(iframe) {display: none !important;}
-div:has(iframe) {display: none !important;}
-
-/* Ocultar elementos relacionados ao branding */
-div[data-testid="stDecoration"] {display: none !important;}
-div[data-testid="stStatusWidget"] {display: none !important;}
-
-<script>
-        setTimeout(function() {
-            var iframe = document.querySelector('iframe[title="streamlit branding"]');
-            if (iframe) {
-                iframe.style.display = 'none';
-            }
-        }, 1000);
-</script>
-
-    }
-
     /* Estilo para o texto na sidebar */
     .stSidebar .stMarkdown, .stSidebar .stTextInput, .stSidebar .stTextArea, .stSidebar .stButton, .stSidebar .stExpander {
         color: white !important;  /* Cor do texto na sidebar */
@@ -172,7 +130,7 @@ ICON_PATH = "assets/icon_cade.png"
 if os.path.exists(ICON_PATH):
     try:
         # Usar st.columns para posicionar o ícone ao lado do título
-        col1, col2 = st.columns([1.7, 4])  # Ajuste as proporções conforme necessário
+        col1, col2 = st.columns([1.5, 4])  # Ajuste as proporções conforme necessário
         with col1:
             st.image(ICON_PATH, width=10000000)  # Exibe o ícone com largura de 30px
         with col2:
