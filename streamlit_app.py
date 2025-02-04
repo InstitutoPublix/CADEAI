@@ -16,26 +16,6 @@ st.set_page_config(
     layout="wide",
 )
 
-hide_streamlit_style = """
-    <style>
-        /* Esconde o botão "Deploy" */
-        .stDeployButton {
-            display: none;
-        }
-        /* Esconde o texto "Made with Streamlit" */
-        footer {
-            visibility: hidden;
-        }
-        footer:after {
-            content: '';
-            visibility: visible;
-            display: block;
-            position: relative;
-            padding: 5px;
-            top: 2px;
-        }
-    </style>
-"""
 
 # Aplica o CSS
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
@@ -45,6 +25,13 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 st.markdown(
     """
     <style>
+
+/* Esconde os elementos indesejados */
+    ._link_gzau3_10, ._profileContainer_gzau3_53 {
+        display: none !important;
+        visibility: hidden !important;
+    }
+
         /* Remover barra inferior completa */
         footer { 
             visibility: hidden !important;
