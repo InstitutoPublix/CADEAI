@@ -33,8 +33,9 @@ footer {visibility: hidden;}
 /* Ajustar margem para evitar espaços vazios */
 .block-container {padding-top: 1rem;
 
-/* Remover botão "Made with Streamlit" */
-footer {visibility: hidden;}
+/* Remover botão "Hosted with Streamlit" */
+footer {visibility: hidden !important;}
+[data-testid="stToolbar"] {visibility: hidden !important;}
 
 
     }
