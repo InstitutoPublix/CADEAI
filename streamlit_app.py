@@ -33,7 +33,15 @@ footer {visibility: hidden;}
 /* Ajustar margem para evitar espaços vazios */
 .block-container {padding-top: 1rem;}
 
-
+ .overlay {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 150px;
+            height: 50px;
+            background-color: white;
+            z-index: 1000;
+        }
 
     /* Estilo para o texto na sidebar */
     .stSidebar .stMarkdown, .stSidebar .stTextInput, .stSidebar .stTextArea, .stSidebar .stButton, .stSidebar .stExpander {
