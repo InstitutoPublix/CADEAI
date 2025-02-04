@@ -22,21 +22,20 @@ st.markdown(
     header {visibility: hidden;}
 
     /* Remover botão de configurações */
-[data-testid="stToolbar"] {visibility: hidden !important;}
+    [data-testid="stToolbar"] {visibility: hidden !important;}
 
-/* Remover rodapé do Streamlit */
-footer {visibility: hidden;}
+    /* Remover rodapé do Streamlit */
+    footer {visibility: hidden;}
 
-/* Remover botão de compartilhamento */
-[data-testid="stActionButtonIcon"] {display: none !important;}
+    /* Remover botão de compartilhamento */
+    [data-testid="stActionButtonIcon"] {display: none !important;}
 
-/* Ajustar margem para evitar espaços vazios */
-.block-container {padding-top: 1rem;
+    /* Ajustar margem para evitar espaços vazios */
+    .block-container {padding-top: 1rem;
 
-/* Remover botão "Hosted with Streamlit" */
-footer {visibility: hidden !important;}
-[data-testid="stToolbar"] {visibility: hidden !important;}
-
+    /* Remover botão "Hosted with Streamlit" */
+    footer {visibility: hidden !important;}
+    [data-testid="stToolbar"] {visibility: hidden !important;}
 
     }
 
