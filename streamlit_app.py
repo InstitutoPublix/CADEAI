@@ -21,6 +21,44 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+        /* Remover barra inferior completa */
+        footer { 
+            visibility: hidden !important;
+            display: none !important;
+        }
+
+        /* Remover qualquer iframe que possa conter o branding */
+        iframe[title="streamlit branding"] {
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        /* Remover a toolbar do Streamlit */
+        [data-testid="stToolbar"] {
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        /* Remover qualquer div fixa que possa conter os botões */
+        div[data-testid="stActionButtonIcon"] {
+            display: none !important;
+            visibility: hidden !important;
+        }
+
+        /* Ocultar qualquer elemento fixo no canto inferior direito */
+        div[style*="position: fixed"][style*="right: 0px"][style*="bottom: 0px"] {
+            display: none !important;
+            visibility: hidden !important;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
+st.markdown(
+    """
+    <style>
         /* Remover botões no canto inferior direito */
         iframe[title="streamlit branding"] {
             display: none !important;
