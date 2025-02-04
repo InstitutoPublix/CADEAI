@@ -16,28 +16,24 @@ st.set_page_config(
     layout="wide",
 )
 
-st.markdown(
+import streamlit.components.v1 as components
+
+components.html(
     """
-    <script>
-        function removeStreamlitElements() {
-            // Removendo footer e toolbars do Streamlit
-            var elements = document.querySelectorAll('footer, iframe[title="streamlit branding"], [data-testid="stToolbar"], div[data-testid="stActionButtonIcon"]');
-            elements.forEach(el => el.remove());
-
-            // Verificando se o botão persistiu após o carregamento
-            setTimeout(() => {
-                var fixedElements = document.querySelectorAll('div[style*="position: fixed"][style*="right: 0px"][style*="bottom: 0px"]');
-                fixedElements.forEach(el => el.remove());
-            }, 500);
+    <style>
+        .block-overlay {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 150px;
+            height: 60px;
+            background-color: white;
+            z-index: 9999;
         }
-
-        // Executa a remoção ao carregar a página e a cada 2 segundos (caso Streamlit tente recriar os botões)
-        setInterval(removeStreamlitElements, 2000);
-    </script>
+    </style>
+    <div class="block-overlay"></div>
     """,
-    unsafe_allow_html=True
-)
-
+    height=0
 
 import time
 
