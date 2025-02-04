@@ -33,30 +33,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.markdown(
-    """
-    <script>
-        function removeStreamlitElements() {
-            var observer = new MutationObserver((mutations) => {
-                mutations.forEach((mutation) => {
-                    var targetElements = document.querySelectorAll(
-                        'footer, iframe[title="streamlit branding"], [data-testid="stToolbar"], div[data-testid="stActionButtonIcon"], div[style*="position: fixed"][style*="right: 0px"][style*="bottom: 0px"]'
-                    );
-                    targetElements.forEach(el => el.remove());
-                });
-            });
-
-            observer.observe(document.body, { childList: true, subtree: true });
-        }
-
-        document.addEventListener("DOMContentLoaded", removeStreamlitElements);
-        setTimeout(removeStreamlitElements, 3000); // Tentativa extra após 3 segundos
-    </script>
-    """,
-    unsafe_allow_html=True
-)
-
-
 # CSS personalizado para estilizar o balão de upload e o aviso
 
 st.markdown(
