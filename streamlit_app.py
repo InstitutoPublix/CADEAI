@@ -17,6 +17,25 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+
+<style>
+/* Remover barra superior do Streamlit */
+header {visibility: hidden;}
+
+/* Remover botão de configurações */
+[data-testid="stToolbar"] {visibility: hidden !important;}
+
+/* Remover rodapé do Streamlit */
+footer {visibility: hidden;}
+
+/* Remover botão de compartilhamento */
+[data-testid="stActionButtonIcon"] {display: none !important;}
+
+/* Ajustar margem para evitar espaços vazios */
+.block-container {padding-top: 1rem;}
+</style>
+
+
     /* Estilo para o texto na sidebar */
     .stSidebar .stMarkdown, .stSidebar .stTextInput, .stSidebar .stTextArea, .stSidebar .stButton, .stSidebar .stExpander {
         color: white !important;  /* Cor do texto na sidebar */
