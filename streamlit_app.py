@@ -33,6 +33,10 @@ footer {visibility: hidden;}
 /* Ajustar margem para evitar espaços vazios */
 .block-container {padding-top: 1rem;
 
+/* Remover botão "Made with Streamlit" */
+footer {visibility: hidden;}
+
+
     }
 
     /* Estilo para o texto na sidebar */
