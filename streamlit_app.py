@@ -5,6 +5,25 @@ import os
 from PIL import Image
 import time
 import json
+import streamlit.components.v1 as components
+
+components.html(
+    """
+    <style>
+        .overlay {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 180px;
+            height: 60px;
+            background-color: white;
+            z-index: 9999;
+        }
+    </style>
+    <div class="overlay"></div>
+    """,
+    height=0
+)
 
 # Configurações iniciais
 st.set_page_config(
