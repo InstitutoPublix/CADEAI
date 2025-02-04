@@ -34,8 +34,8 @@ st.markdown(
     .block-container {padding-top: 1rem;
 
     /* Remover botão "Hosted with Streamlit" */
-    footer {visibility: hidden !important;}
-    [data-testid="stToolbar"] {visibility: hidden !important;}
+footer:has([data-testid="stToolbar"]) {display: none !important;}
+iframe[title="streamlit branding"] {display: none !important;}
 
     }
 
