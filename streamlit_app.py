@@ -17,9 +17,6 @@ st.set_page_config(
 )
 
 
-# Aplica o CSS
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-
 # CSS personalizado para estilizar o balão de upload e o aviso
 
 st.markdown(
