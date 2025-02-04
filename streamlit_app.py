@@ -35,6 +35,24 @@ st.markdown(
 
 # CSS personalizado para estilizar o balão de upload e o aviso
 
+st.markdown(
+    """
+    <style>
+    .blocker {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 120px;
+        height: 50px;
+        background: white;
+        z-index: 9999;
+    }
+    </style>
+    <div class="blocker"></div>
+    """,
+    unsafe_allow_html=True
+)
+
 
 st.markdown(
     """
