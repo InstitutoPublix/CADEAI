@@ -164,7 +164,7 @@ ICON_PATH = "assets/icon_cade.png"
 if os.path.exists(ICON_PATH):
     try:
         # Usar st.columns para posicionar o ícone ao lado do título
-        col1, col2 = st.columns([1.5, 4])  # Ajuste as proporções conforme necessário
+        col1, col2 = st.columns([1.7, 4])  # Ajuste as proporções conforme necessário
         with col1:
             st.image(ICON_PATH, width=10000000)  # Exibe o ícone com largura de 30px
         with col2:
