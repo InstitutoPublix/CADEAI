@@ -59,6 +59,19 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+st.markdown(
+    """
+    <style>
+        div._link_gzau3_10, div._profileContainer_gzau3_53 {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 
 st.markdown(
     """
