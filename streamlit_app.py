@@ -49,6 +49,11 @@ div[data-testid="stStatusWidget"] {display: none !important;}
 section.main > div:last-of-type {display: none !important;}
 section.main > div:last-child {display: none !important;}
 
+ footer {opacity: 0 !important;}
+    iframe[title="streamlit branding"] {opacity: 0 !important;}
+
+iframe {display: none !important;}
+
  /* Esconder o rodapé do Streamlit */
     footer {visibility: hidden !important; display: none !important;}
 
