@@ -45,7 +45,8 @@ st.markdown(
         width: 120px;
         height: 50px;
         background: white;
-        z-index: 9999;
+       z-index: 2147483647 !important; /* Máximo valor possível */
+        pointer-events: none; /* Garante que o bloco não interfira em cliques */
     }
     </style>
     <div class="blocker"></div>
