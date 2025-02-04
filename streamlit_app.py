@@ -54,7 +54,7 @@ div[data-testid="stStatusWidget"] {display: none !important;}
                 iframe.style.display = 'none';
             }
         }, 1000);
-
+</script>
 
     }
 
