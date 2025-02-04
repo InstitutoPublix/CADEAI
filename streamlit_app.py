@@ -49,6 +49,17 @@ div[data-testid="stStatusWidget"] {display: none !important;}
 section.main > div:last-of-type {display: none !important;}
 section.main > div:last-child {display: none !important;}
 
+/* Criar um bloco branco para cobrir o botão "Hosted with Streamlit" */
+    .hide-streamlit-footer {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 150px;  /* Ajuste a largura conforme necessário */
+        height: 40px;  /* Ajuste a altura conforme necessário */
+        background-color: white;  /* Cor branca para esconder */
+        z-index: 9999;  /* Certifique-se de que está acima de outros elementos */
+    }
+
     }
 
     /* Estilo para o texto na sidebar */
