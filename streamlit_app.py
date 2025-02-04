@@ -103,7 +103,7 @@ components.html(
     <style>
         .cover-buttons {
             position: fixed;
-            bottom: 0;
+            bottom: 10;
             right: 0;
             width: 200px;
             height: 80px;
