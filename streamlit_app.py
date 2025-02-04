@@ -18,7 +18,6 @@ st.markdown(
     """
     <style>
 
-<style>
 /* Remover barra superior do Streamlit */
 header {visibility: hidden;}
 
@@ -33,7 +32,7 @@ footer {visibility: hidden;}
 
 /* Ajustar margem para evitar espaços vazios */
 .block-container {padding-top: 1rem;}
-</style>
+
 
 
     /* Estilo para o texto na sidebar */
