@@ -38,6 +38,9 @@ iframe[title="streamlit branding"] {display: none !important;}
 iframe {display: none !important;}
 footer {visibility: hidden !important; height: 0px !important;}
 
+/* Oculta qualquer div que contenha a marca do Streamlit */
+div:has(iframe) {display: none !important;}
+
     }
 
     /* Estilo para o texto na sidebar */
