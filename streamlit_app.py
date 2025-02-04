@@ -18,28 +18,36 @@ st.markdown(
     """
     <style>
 
-    /* Remover barra superior do Streamlit */
-    header {visibility: hidden;}
+    <style>
+/* Remover a barra superior do Streamlit */
+header {display: none !important;}
 
-    /* Remover botão de configurações */
-    [data-testid="stToolbar"] {visibility: hidden !important;}
+/* Remover o botão de configurações */
+[data-testid="stToolbar"] {display: none !important;}
 
-    /* Remover rodapé do Streamlit */
-    footer {visibility: hidden;}
+/* Remover o rodapé do Streamlit */
+footer {display: none !important;}
 
-    /* Remover botão de compartilhamento */
-    [data-testid="stActionButtonIcon"] {display: none !important;}
+/* Remover o botão de compartilhamento */
+[data-testid="stActionButtonIcon"] {display: none !important;}
 
-    /* Ajustar margem para evitar espaços vazios */
-    .block-container {padding-top: 1rem;
+/* Ajustar margem para evitar espaços vazios */
+.block-container {padding-top: 1rem;}
 
-    /* Remover botão "Hosted with Streamlit" */
-iframe[title="streamlit branding"] {display: none !important;}
+/* Remover qualquer iframe que contenha o branding */
 iframe {display: none !important;}
-footer {visibility: hidden !important; height: 0px !important;}
 
-/* Oculta qualquer div que contenha a marca do Streamlit */
+/* Ocultar o footer de maneira mais agressiva */
+footer:has(iframe) {display: none !important;}
 div:has(iframe) {display: none !important;}
+
+/* Ocultar elementos relacionados ao branding */
+div[data-testid="stDecoration"] {display: none !important;}
+div[data-testid="stStatusWidget"] {display: none !important;}
+
+/* Forçar remoção do botão "Hosted with Streamlit" */
+section.main > div:last-of-type {display: none !important;}
+section.main > div:last-child {display: none !important;}
 
     }
 
