@@ -16,9 +16,29 @@ st.set_page_config(
     layout="wide",
 )
 
-# Carrega o CSS personalizado
-with open('style.css') as f:
-    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+hide_streamlit_style = """
+    <style>
+        /* Esconde o botão "Deploy" */
+        .stDeployButton {
+            display: none;
+        }
+        /* Esconde o texto "Made with Streamlit" */
+        footer {
+            visibility: hidden;
+        }
+        footer:after {
+            content: '';
+            visibility: visible;
+            display: block;
+            position: relative;
+            padding: 5px;
+            top: 2px;
+        }
+    </style>
+"""
+
+# Aplica o CSS
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # CSS personalizado para estilizar o balão de upload e o aviso
 
