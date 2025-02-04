@@ -18,7 +18,7 @@ st.set_page_config(
 
 import streamlit.components.v1 as components
 
-components.html(
+components.html()
     """
     <style>
         .block-overlay {
