@@ -38,26 +38,6 @@ st.markdown(
 st.markdown(
     """
     <style>
-    .blocker {
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        width: 120px;
-        height: 50px;
-        background: white;
-       z-index: 2147483647 !important; /* Máximo valor possível */
-        pointer-events: none; /* Garante que o bloco não interfira em cliques */
-    }
-    </style>
-    <div class="blocker"></div>
-    """,
-    unsafe_allow_html=True
-)
-
-
-st.markdown(
-    """
-    <style>
         /* Remover barra inferior completa */
         footer { 
             visibility: hidden !important;
