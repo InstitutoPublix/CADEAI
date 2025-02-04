@@ -18,23 +18,23 @@ st.set_page_config(
 
 # CSS personalizado para estilizar o balão de upload e o aviso
 
-components.html(
+st.markdown(
     """
     <style>
-        .overlay {
-            position: fixed;
-            bottom: 0;
-            right: 0;
-            width: 180px;
-            height: 60px;
-            background-color: white;
-            z-index: 9999;
+        iframe[title="streamlit branding"] {
+            display: none !important;
+            visibility: hidden !important;
+            width: 0px !important;
+            height: 0px !important;
+            opacity: 0 !important;
+            position: absolute !important;
+            bottom: -9999px !important;
         }
     </style>
-    <div class="overlay"></div>
     """,
-    height=0
+    unsafe_allow_html=True
 )
+
 st.markdown(
     """
     <style>
