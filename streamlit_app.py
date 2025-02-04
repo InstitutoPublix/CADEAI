@@ -16,7 +16,9 @@ st.set_page_config(
     layout="wide",
 )
 
-
+# Carrega o CSS personalizado
+with open('style.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 # CSS personalizado para estilizar o balão de upload e o aviso
 
