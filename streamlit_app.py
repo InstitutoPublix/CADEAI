@@ -113,7 +113,7 @@ components.html(
     </style>
     <div class="cover-buttons"></div>
     """,
-    height=0
+    height=10
 )
 
 
