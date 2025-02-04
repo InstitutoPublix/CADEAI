@@ -35,43 +35,6 @@ st.markdown(
 
 # CSS personalizado para estilizar o balão de upload e o aviso
 
-st.markdown(
-    """
-    <script>
-        function removeStreamlitBottomElements() {
-            var observer = new MutationObserver((mutations) => {
-                mutations.forEach((mutation) => {
-                    // Lista os elementos específicos para remoção
-                    var targetElements = document.querySelectorAll(
-                        'div._link_gzau3_10, div._profileContainer_gzau3_53'
-                    );
-                    targetElements.forEach(el => el.remove());
-                });
-            });
-
-            observer.observe(document.body, { childList: true, subtree: true });
-        }
-
-        document.addEventListener("DOMContentLoaded", removeStreamlitBottomElements);
-        setTimeout(removeStreamlitBottomElements, 3000); // Tentativa extra após 3 segundos
-    </script>
-    """,
-    unsafe_allow_html=True
-)
-
-st.markdown(
-    """
-    <style>
-        div._link_gzau3_10, div._profileContainer_gzau3_53 {
-            display: none !important;
-            visibility: hidden !important;
-            opacity: 0 !important;
-        }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 
 st.markdown(
     """
