@@ -7,6 +7,17 @@ import time
 import json
 import streamlit.components.v1 as components
 
+
+
+# Configurações iniciais
+st.set_page_config(
+    page_title="CADE IA",
+    page_icon="💛",
+    layout="wide",
+)
+
+# CSS personalizado para estilizar o balão de upload e o aviso
+
 components.html(
     """
     <style>
@@ -24,15 +35,6 @@ components.html(
     """,
     height=0
 )
-
-# Configurações iniciais
-st.set_page_config(
-    page_title="CADE IA",
-    page_icon="💛",
-    layout="wide",
-)
-
-# CSS personalizado para estilizar o balão de upload e o aviso
 st.markdown(
     """
     <style>
