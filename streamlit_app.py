@@ -15,6 +15,8 @@ st.set_page_config(
 
 # CSS personalizado para estilizar o balão de upload e o aviso
 st.markdown(
+
+    
     """
     <style>
 
@@ -45,20 +47,14 @@ div:has(iframe) {display: none !important;}
 div[data-testid="stDecoration"] {display: none !important;}
 div[data-testid="stStatusWidget"] {display: none !important;}
 
-/* Forçar remoção do botão "Hosted with Streamlit" */
-section.main > div:last-of-type {display: none !important;}
-section.main > div:last-child {display: none !important;}
+<script>
+        setTimeout(function() {
+            var iframe = document.querySelector('iframe[title="streamlit branding"]');
+            if (iframe) {
+                iframe.style.display = 'none';
+            }
+        }, 1000);
 
- footer {opacity: 0 !important;}
-    iframe[title="streamlit branding"] {opacity: 0 !important;}
-
-iframe {display: none !important;}
-
- /* Esconder o rodapé do Streamlit */
-    footer {visibility: hidden !important; display: none !important;}
-
-    /* Esconder o iframe que contém a marcação "Hosted with Streamlit" */
-    iframe[title="streamlit branding"] {display: none !important;}
 
     }
 
