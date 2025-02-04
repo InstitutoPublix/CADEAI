@@ -19,20 +19,7 @@ st.markdown(
     
     """
     <style>
-
-     .overlay {
-            position: fixed;
-            bottom: 0;
-            right: 0;
-            width: 150px;
-            height: 50px;
-            background-color: white;
-            z-index: 1000;
-        }
-    </style>
-    <div class="overlay"></div>
-    """,
-    height=0
+    
 
     <style>
 /* Remover a barra superior do Streamlit */
