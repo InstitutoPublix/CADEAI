@@ -35,6 +35,23 @@ st.markdown(
 
 # CSS personalizado para estilizar o balão de upload e o aviso
 
+st.markdown(
+    """
+    <style>
+    /* Ocultar os botões do canto inferior direito */
+    div[class*="_profileContainer"], div[class*="_link_"] {
+        display: none !important;
+    }
+
+    /* Ocultar qualquer outro iframe do branding */
+    iframe[title="streamlit branding"] {
+        display: none !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 
 st.markdown(
     """
