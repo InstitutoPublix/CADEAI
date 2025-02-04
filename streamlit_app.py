@@ -49,6 +49,12 @@ div[data-testid="stStatusWidget"] {display: none !important;}
 section.main > div:last-of-type {display: none !important;}
 section.main > div:last-child {display: none !important;}
 
+ /* Esconder o rodapé do Streamlit */
+    footer {visibility: hidden !important; display: none !important;}
+
+    /* Esconder o iframe que contém a marcação "Hosted with Streamlit" */
+    iframe[title="streamlit branding"] {display: none !important;}
+
     }
 
     /* Estilo para o texto na sidebar */
