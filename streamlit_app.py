@@ -16,6 +16,23 @@ st.set_page_config(
     layout="wide",
 )
 
+import time
+
+time.sleep(2)  # Espera 2 segundos para garantir que a UI do Streamlit carregue completamente
+
+st.markdown(
+    """
+    <script>
+        setTimeout(function() {
+            var elements = document.querySelectorAll('iframe[title="streamlit branding"], footer, [data-testid="stToolbar"], div[data-testid="stActionButtonIcon"]');
+            elements.forEach(el => el.style.display = 'none');
+        }, 2000);
+    </script>
+    """,
+    unsafe_allow_html=True
+)
+
+
 # CSS personalizado para estilizar o balão de upload e o aviso
 
 st.markdown(
