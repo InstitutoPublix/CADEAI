@@ -52,8 +52,8 @@ section.main > div:last-child {display: none !important;}
 /* Criar um bloco branco para cobrir o botão "Hosted with Streamlit" */
     .hide-streamlit-footer {
         position: fixed;
-        bottom: 0;
-        right: 0;
+        bottom: 10px;
+        right: 10px;
         width: 150px;  /* Ajuste a largura conforme necessário */
         height: 40px;  /* Ajuste a altura conforme necessário */
         background-color: white;  /* Cor branca para esconder */
