@@ -98,6 +98,25 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+components.html(
+    """
+    <style>
+        .cover-buttons {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 200px;
+            height: 80px;
+            background-color: white;
+            z-index: 9999;
+        }
+    </style>
+    <div class="cover-buttons"></div>
+    """,
+    height=0
+)
+
+
 st.markdown(
     """
     <style>
