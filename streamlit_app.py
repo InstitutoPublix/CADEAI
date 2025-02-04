@@ -21,14 +21,22 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+        /* Remover botões no canto inferior direito */
         iframe[title="streamlit branding"] {
             display: none !important;
-            visibility: hidden !important;
-            width: 0px !important;
-            height: 0px !important;
-            opacity: 0 !important;
-            position: absolute !important;
-            bottom: -9999px !important;
+        }
+        
+        footer { 
+            display: none !important;
+        }
+
+        [data-testid="stToolbar"] {
+            display: none !important;
+        }
+
+        /* Tentar esconder qualquer outro elemento fixo */
+        div[style*="position: fixed"] {
+            display: none !important;
         }
     </style>
     """,
