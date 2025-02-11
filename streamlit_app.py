@@ -366,10 +366,11 @@ if LOGO_BOT:
 else:
     st.sidebar.markdown("**Logo não encontrada**")
 
-# Interface do Streamlit
-api_key = st.sidebar.text_input("🔑 Chave API OpenAI", type="password", placeholder="Insira sua chave API")
-if api_key:
-    openai.api_key = api_key
+# Carrega a chave da API da variável de ambiente
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+if not openai.api_key:
+    raise ValueError("A chave da API não foi encontrada! Certifique-se de que a variável OPENAI_API_KEY está configurada.")
 
     # Botão para limpar o histórico do chat
     if st.sidebar.button("🧹 Limpar Histórico do Chat", key="limpar_historico"):
