@@ -15,6 +15,9 @@ st.set_page_config(
     layout="wide",
 )
 
+# Chave da API configurada no código
+openai.api_key = "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"
+
 
 # CSS personalizado para estilizar o balão de upload e o aviso
 
@@ -371,8 +374,7 @@ else:
         limpar_historico()
         st.sidebar.success("Histórico do chat limpo com sucesso!")
 
-# Chave da API configurada no código
-openai.api_key = "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"
+
 
 user_input = st.chat_input("💬 Sua pergunta:")
 if user_input and user_input.strip():
