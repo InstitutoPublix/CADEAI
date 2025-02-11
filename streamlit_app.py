@@ -374,11 +374,8 @@ if LOGO_BOT:
 else:
     st.sidebar.markdown("**Logo não encontrada**")
 
-
-       
-
 # Acessa a chave da API
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = "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"
 
 # Verifica se a chave foi carregada
 if not openai.api_key:
