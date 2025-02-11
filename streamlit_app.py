@@ -6,7 +6,7 @@ from PIL import Image
 import time
 import json
 import streamlit.components.v1 as components
-from dotenv import load_dotenv
+
 
 
 # Configurações iniciais
@@ -16,8 +16,6 @@ st.set_page_config(
     layout="wide",
 )
 
-# Carrega as variáveis do arquivo .env
-load_dotenv()
 
 # CSS personalizado para estilizar o balão de upload e o aviso
 
