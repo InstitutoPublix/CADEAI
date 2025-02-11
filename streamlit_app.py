@@ -362,6 +362,12 @@ def gerar_resposta(texto_usuario):
             else:
                 return f"Erro ao gerar a resposta: {str(e)}"
 
+ # Botão para limpar o histórico do chat
+    if st.sidebar.button("🧹 Limpar Histórico do Chat", key="limpar_historico"):
+        limpar_historico()
+        st.sidebar.success("Histórico do chat limpo com sucesso!")
+
+
 # Adicionar a logo na sidebar
 if LOGO_BOT:
     st.sidebar.image(LOGO_BOT, width=300)  # Ajuste o tamanho conforme necessário
@@ -369,10 +375,7 @@ else:
     st.sidebar.markdown("**Logo não encontrada**")
 
 
-        # Botão para limpar o histórico do chat
-    if st.sidebar.button("🧹 Limpar Histórico do Chat", key="limpar_historico"):
-        limpar_historico()
-        st.sidebar.success("Histórico do chat limpo com sucesso!")
+       
 
 # Acessa a chave da API
 openai.api_key = os.getenv("OPENAI_API_KEY")
