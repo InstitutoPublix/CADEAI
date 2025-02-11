@@ -6,7 +6,7 @@ from PIL import Image
 import time
 import json
 import streamlit.components.v1 as components
-
+from dotenv import load_dotenv
 
 
 # Configurações iniciais
@@ -16,6 +16,8 @@ st.set_page_config(
     layout="wide",
 )
 
+# Carrega as variáveis do arquivo .env
+load_dotenv()
 
 # CSS personalizado para estilizar o balão de upload e o aviso
 
@@ -366,18 +368,18 @@ if LOGO_BOT:
 else:
     st.sidebar.markdown("**Logo não encontrada**")
 
-# Carrega a chave da API da variável de ambiente
-openai.api_key = os.getenv("OPENAI_API_KEY")
 
-if not openai.api_key:
-    raise ValueError("A chave da API não foi encontrada! Certifique-se de que a variável OPENAI_API_KEY está configurada.")
-
-    # Botão para limpar o histórico do chat
+        # Botão para limpar o histórico do chat
     if st.sidebar.button("🧹 Limpar Histórico do Chat", key="limpar_historico"):
         limpar_historico()
         st.sidebar.success("Histórico do chat limpo com sucesso!")
-else:
-    st.warning("Por favor, insira sua chave de API para continuar.")
+
+# Acessa a chave da API
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+# Verifica se a chave foi carregada
+if not openai.api_key:
+    raise ValueError("A chave da API não foi encontrada! Verifique o arquivo .env.")
 
 user_input = st.chat_input("💬 Sua pergunta:")
 if user_input and user_input.strip():
