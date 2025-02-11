@@ -377,9 +377,6 @@ else:
 # Acessa a chave da API
 openai.api_key = "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"
 
-# Verifica se a chave foi carregada
-if not openai.api_key:
-    raise ValueError("A chave da API não foi encontrada! Verifique o arquivo .env.")
 
 user_input = st.chat_input("💬 Sua pergunta:")
 if user_input and user_input.strip():
